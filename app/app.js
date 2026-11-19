@@ -296,8 +296,10 @@
     }
   });
 
-  // Screenshot states (?shot=)
+  // Screenshot states (?shot= and ?trophy=)
   function applyShot() {
+    var trophyParam = Number(params.get("trophy") || "");
+    if (trophyParam >= 1 && trophyParam <= 55) selectedId = trophyParam;
     if (shot === "roadmap") { setView("roadmap"); return; }
     if (shot === "tracker") {
       filterKind = "missable";
@@ -310,7 +312,7 @@
       selectedId = 28;
       return;
     }
-    if (shot === "detail" || shot === "cover") { selectedId = 28; return; }
+    if (shot === "detail" || shot === "cover") { if (!trophyParam) selectedId = 28; return; }
   }
 
   // Boot
