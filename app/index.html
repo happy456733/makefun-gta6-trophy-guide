@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide — All 55 Trophies, Roadmap &amp; Tracker</title>
+<meta name="description" content="An offline guide and tracker for all 55 Grand Theft Auto VI trophies on PlayStation 5: official names, descriptions and grades, original guides with sources, a roadmap to the Platinum, missable flags, and a checklist that saves your progress.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="top-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5 &middot; Leonida</p>
+    <h1>GTA VI Trophy Guide</h1>
+    <p class="lede">All 55 trophies — 1 Platinum, 2 Gold, 6 Silver, 46 Bronze — with an original guide for every one, a roadmap to the Platinum, missable flags, and a checklist that remembers your progress. Works fully offline.</p>
+    <div class="progress" id="progress" aria-live="polite">
+      <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <p class="progress-text" id="progressText">0 of 55 earned</p>
+    </div>
+  </div>
+</header>
+
+<nav class="controls" aria-label="Guide controls">
+  <div class="controls-row">
+    <label class="search">
+      <span class="visually-hidden">Search trophies</span>
+      <input type="search" id="search" placeholder="Search a trophy or guide…" autocomplete="off">
+    </label>
+    <div class="view-switch" role="group" aria-label="View">
+      <button type="button" id="viewList" class="view-btn active" aria-pressed="true">Checklist</button>
+      <button type="button" id="viewRoadmap" class="view-btn" aria-pressed="false">Roadmap to Platinum</button>
+    </div>
+  </div>
+  <div class="controls-row">
+    <div class="filters" role="group" aria-label="Filter by kind" id="filters">
+      <button type="button" class="filter-btn active" data-kind="all">All 55</button>
+      <button type="button" class="filter-btn" data-kind="story">Story</button>
+      <button type="button" class="filter-btn" data-kind="missable">Missable</button>
+      <button type="button" class="filter-btn" data-kind="collectibles">Collectibles</button>
+      <button type="button" class="filter-btn" data-kind="activities">Activities</button>
+      <button type="button" class="filter-btn" data-kind="online">Online</button>
+    </div>
+    <label class="spoiler-toggle">
+      <input type="checkbox" id="spoilerToggle">
+      <span>Hide story trophies until earned (spoiler-safe)</span>
+    </label>
+  </div>
+  <div class="controls-row">
+    <button type="button" id="exportBtn" class="action-btn">Export progress</button>
+    <button type="button" id="importBtn" class="action-btn">Import progress</button>
+    <input type="file" id="importFile" accept="application/json,.json" class="visually-hidden">
+    <button type="button" id="resetBtn" class="action-btn danger">Reset progress</button>
+    <p class="hint">Progress is saved in this browser only. Export a file to keep a backup or move it to another device.</p>
+  </div>
+</nav>
+
+<main class="layout">
+  <section class="list-col" aria-label="Trophy checklist">
+    <p class="count-line" id="countLine"></p>
+    <ul class="trophy-list" id="trophyList"></ul>
+    <p class="empty" id="emptyState" hidden>No trophies match this filter. All 55 trophies unlock in single-player — there are no online trophies in GTA VI.</p>
+  </section>
+
+  <aside class="detail-col" aria-label="Trophy guide" id="detailCol">
+    <div class="detail" id="detail">
+      <p class="detail-empty">Pick a trophy from the list to read its guide, sources and missable warning.</p>
+    </div>
+  </aside>
+</main>
+
+<section class="roadmap" id="roadmap" hidden aria-label="Roadmap to the Platinum">
+  <h2>Roadmap to the Platinum</h2>
+  <p class="roadmap-intro">Around 200 hours, in five stages. Do the story first — GTA VI has no mission replay and no New Game Plus, so keep a manual save at the start of every chapter and one before the final mission. The one missable collectible is the Chapter 1 meditation spot for Positive Mental Attitude.</p>
+  <ol class="stages" id="stages"></ol>
+  <p class="roadmap-note">No online trophies, no difficulty trophies, no mission medals. Cheats switch off trophies and saving, so play clean.</p>
+</section>
+
+<footer class="foot">
+  <p>Trophy names, descriptions and grades are the official PlayStation list, as listed by Exophase and PSNProfiles. Every guide is written in my own words; the sources for each guide are named beside it. No Rockstar artwork is used here, and the app makes no network requests.</p>
+  <p>Built for make.fun's “Build the best GTA 6 trophy guide” bounty. Guide facts checked against <a href="https://outputlag.com/guides/gta-6-trophy-list/">Output Lag</a>, <a href="https://press-start.com.au/news/2026/11/18/gta-6-trophy-list/">Press Start</a>, <a href="https://leonidahub.org/en/news/gta-vi-reportedly-has-55-ps5-trophies-platinum-included-as-xbox-and-playstation-data-line-up">Leonida Hub</a> and <a href="https://eso.jffk.org/gta-6-trophy-list-all-55-trophies-and-achievements/">ESO</a>.</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
